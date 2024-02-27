@@ -1,15 +1,64 @@
 $(function () {
 
+    // 헤더 util관련
+    $("#language").change(function () {
+        changeLanguage();
+    });
+    function changeLanguage() {
+        var selectedLanguage = $("#language").val();
 
+        var languageTexts = {
+            'en': {
+                'greeting': 'Busan Port Terminal Co., Ltd. English version',
+                'description': 'This is the English version of Busan Port Terminal Co., Ltd.'
+            },
+            'ko': {
+                'greeting': '부산항만터미널주식회사 한국어버전',
+                'description': '부산항만터미널주식회사의 한국어버전입니다.'
+            }
+        };
+
+        $("#greeting").text(languageTexts[selectedLanguage]['greeting']);
+        $("#description").text(languageTexts[selectedLanguage]['description']);
+    };
+    // 헤더위 팝업 슬라이드
+    $('.popup_btn button').on('click', function () {
+        $('.header_wrap .util .popup_btn button').toggleClass('active')
+        $('.top_popup').toggleClass('on')
+    });
+
+    $('.popup_slide').slick({
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: false,
+    });
+
+    // 메뉴 버튼
     $('.menu_tab button').on('click', function () {
+        $('.menu_tab button i').toggleClass('on');
         $('.hidden_menu').toggleClass('on')
     });
 
+    // 메인비주얼 슬라이드
     $('.visual_slide').slick({
-        arrows: true,
+        arrows: false,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: false,
     });
 
+    // 메인뉴스 hover효과
+    $('.Ci_wrap .itm').on('mouseenter', function () {
+        $('.Ci_wrap .itm').removeClass('on');
+        $(this).addClass('on');
+        $('.Ci_wrap .itm .txt_box').removeClass('on');
+        $('.Ci_wrap .itm .txt_box').addClass('on');
+    })
 
+    // 메인히스토리 슬라이드
     $('.History_slide').slick({
         arrows: true,
         slidesToShow: 4,
@@ -34,34 +83,17 @@ $(function () {
         $('.History_wrap .top_dots li').eq(idx).addClass('on')
     });
 
+    // 메인뉴스 좌측 탭
     $('.news_wrap .left_tap .tab_tit li a').on('click', function (e) {
-        //1. a를 클릭햇을떄 새로고침 되지않게 하기 = function에 (e)
         e.preventDefault();
-        //2. 번호를 받아오기
         let idx = $(this).parent().index();
-        //3. 번호에 부합하는 tab_con>li를 보여주기
         $('.news_wrap .left_tap .tab_con>li').removeClass('on');
         $('.news_wrap .left_tap .tab_con>li').eq(idx).addClass('on');
-        //4. 메뉴에 스타일 붙이기
         $('.news_wrap .left_tap .tab_tit>li').removeClass('on')
         $('.news_wrap .left_tap .tab_tit>li').eq(idx).addClass('on')
     });
 
-    $('.popup_slide').slick({
-        arrows: true,
-    });
-
-    $('.popup_btn button').on('click', function () {
-        $('.top_popup').toggleClass('on')
-    });
-
-        $('.Ci_wrap .itm').on('mouseenter', function () {
-            $('.Ci_wrap .itm').removeClass('on');
-            $(this).addClass('on');
-            $('.Ci_wrap .itm .txt_box').removeClass('on');
-            $('.Ci_wrap .itm .txt_box').addClass('on');
-        })
-
+    //투탑버튼 실행
     $('.totop_btn').on('click', function () {
         $('html, body').animate({ scrollTop: 0 }, 800);
     });
@@ -76,4 +108,5 @@ $(function () {
             $('.header').removeClass('on')
         }
     });
+
 });

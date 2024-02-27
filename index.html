@@ -22,32 +22,26 @@
     <div class="wrap">
         <div class="top_popup">
             <div class="popup_slide">
-                <div class="itm">
-                    <div class="txt_box">
-                        <h3>차량반출입 예약시스템[VBS]</h3>
-                        <p>VBS는 컨테이너 반출입 예약을 통해 항만 내 차량 대기시간을 줄이고,
-                            항만 운영 효율성을 높이기 위한 제도 입니다.
-                        </p>
-                        <span>BPT는 VBS시범 서비스 운영중입니다.</span>
-                    </div>
+                <div class="txt_box">
+                    <h3>차량반출입 예약시스템[VBS]</h3>
+                    <p>VBS는 컨테이너 반출입 예약을 통해 항만 내 차량 대기시간을 줄이고,
+                        항만 운영 효율성을 높이기 위한 제도 입니다.
+                    </p>
+                    <span>BPT는 VBS시범 서비스 운영중입니다.</span>
                 </div>
-                <div class="itm">
-                    <div class="txt_box">
-                        <h3>야드 내 외부기사 하차 금지 안내</h3>
-                        <p>당사를 이용하는 기사여러분께 감사의 말씀을 드립니다.
-                        </p>
-                        <span>안전 사고 예방을 위해 외부기사의 하차를 금지합니다.</span>
-                    </div>
+                <div class="txt_box">
+                    <h3>야드 내 외부기사 하차 금지 안내</h3>
+                    <p>당사를 이용하는 기사여러분께 감사의 말씀을 드립니다.
+                    </p>
+                    <span>안전 사고 예방을 위해 외부기사의 하차를 금지합니다.</span>
                 </div>
-                <div class="itm">
-                    <div class="txt_box">
-                        <h3>ECO(예외컨처리사무소) 운영 안내</h3>
-                        <p>2022년 11월 3일 부터 부정적 반입 컨테이너에 대한 예비기 운영 및 관련업무지원이 ECO에서 진행됩니다.<br />
-                            따라서 현 위치 예비기는 11월 2일부 사용중지 되오니 참고하시고,
-                            <br />편리하고 안전한 터미널 이용이 되기실 바립니다.
-                        </p>
-                        <span>BPT 운영기술팀</span>
-                    </div>
+                <div class="txt_box">
+                    <h3>ECO(예외컨처리사무소) 운영 안내</h3>
+                    <p>2022년 11월 3일 부터 부정적 반입 컨테이너에 대한 예비기 운영 및 관련업무지원이 ECO에서 진행됩니다.<br />
+                        따라서 현 위치 예비기는 11월 2일부 사용중지 되오니 참고하시고,
+                        <br />편리하고 안전한 터미널 이용이 되기실 바립니다.
+                    </p>
+                    <span>BPT 운영기술팀</span>
                 </div>
             </div>
         </div>
@@ -61,19 +55,20 @@
                 </h1>
                 <nav class="gnb">
                     <ul>
-                        <li><a href="">회사소개</a></li>
-                        <li><a href="">사업소개</a></li>
-                        <li><a href="">터미널 특징</a></li>
-                        <li><a href="">홍보센터</a></li>
-                        <li><a href="">채용정보</a></li>
-                        <li><a href="">고객마당</a></li>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">사업소개</a></li>
+                        <li><a href="#">터미널 특징</a></li>
+                        <li><a href="#">홍보센터</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">고객마당</a></li>
                     </ul>
                 </nav>
                 <div class="util">
                     <div class="lang">
-                        <select>
-                            <option value="">KOR</option>
-                            <option value="">ENG</option>
+                        <label for="language" class="blind">Select Language</label>
+                        <select class="language" name="language">
+                            <option value="KOR">KOR</option>
+                            <option value="ENG">ENG</option>
                         </select>
                     </div>
                     <div class="popup_btn">
@@ -81,7 +76,14 @@
                             <span>popup</span>
                         </button>
                     </div>
+                    <div class="menu_tab hide">
+                        <button>
+                            <i class="xi-bars"></i>
+                        </button>
+                    </div>
                 </div>
+            </div>
+            <div class="menu">
                 <div class="menu_tab">
                     <button>
                         <i class="xi-bars"></i>
@@ -170,12 +172,11 @@
                     </ul>
                 </div>
             </div>
-
         </header>
         <main class="main">
             <section class="main_Visual">
-                <h2 class="blind">비주얼섹션</h2>
                 <div class="visual_wrap">
+                    <h2 class="blind">비주얼섹션</h2>
                     <div class="visual_slide">
                         <figure>
                             <img src="./images/mv_01.jpg" alt="">
@@ -183,8 +184,8 @@
                                 <strong>부산과 세계를 잇는 관문</strong>
                                 <p class="txt_top">
                                     <span class="bold">Global</span>
-                                    &nbsp;<span> Terminal</span>
-                                    &nbsp;<span> Operatop</span>
+                                    &nbsp;<span>Terminal</span>
+                                    &nbsp;<span>Operatop</span>
                                 </p>
                                 <p class="txt_bottom">부산항터미널이 글로벌터미널의 중심이 됩니다.</p>
                             </div>
@@ -236,6 +237,7 @@
                     </div>
                 </div>
             </section>
+            
             <section class="main_Ci sec">
                 <div class="title">
                     <h2>CI STORY</h2>
@@ -524,7 +526,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer sec">
+        <footer class="footer">
             <div class="title">
                 <h2>BUSAN PORT TERMINAL</h2>
                 <p>부산과 세계를 잇는 관문, 부산항터미널주식회사</p>
@@ -536,8 +538,9 @@
                     <li><a href="">터미널 운영 시뮬레이션</a></li>
                     <li><a href="">관련사이트</a></li>
                 </ul>
+
                 <ul class="mid_util">
-                    <li class="desc"><a href="">개인정보처리방침</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
                     <li><a href="">이용약관</a></li>
                     <li><a href="">법적고지</a></li>
                     <li><a href="">이메일무단수집거부</a></li>
@@ -552,7 +555,6 @@
                 </ul>
             </div>
             <p>COPYRIGHT ⓒ 2017 BUSAN PORT TERMINAL CORP. ALL RIGHT RESERVED</p>
-            <a href=""><img src="./images/footer_01.png" alt=""></a>
         </footer>
         <div class="totop_btn">
             <span class="blind">top</span>
