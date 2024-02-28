@@ -1,4 +1,18 @@
 $(function () {
+    // 헤더위 팝업 슬라이드
+    $('.popup_btn button').on('click', function () {
+        $('.header_wrap .util .popup_btn button').toggleClass('active');
+        $('.top_popup').toggleClass('on');
+    });
+
+    $('.popup_slide').slick({
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: false,
+    });
+
 
     // 헤더 util관련
     $("#language").change(function () {
@@ -21,24 +35,11 @@ $(function () {
         $("#greeting").text(languageTexts[selectedLanguage]['greeting']);
         $("#description").text(languageTexts[selectedLanguage]['description']);
     };
-    // 헤더위 팝업 슬라이드
-    $('.popup_btn button').on('click', function () {
-        $('.header_wrap .util .popup_btn button').toggleClass('active')
-        $('.top_popup').toggleClass('on')
-    });
-
-    $('.popup_slide').slick({
-        arrows: false,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnHover: false,
-    });
 
     // 메뉴 버튼
     $('.menu_tab button').on('click', function () {
         $('.menu_tab button i').toggleClass('on');
-        $('.hidden_menu').toggleClass('on')
+        $('.hidden_menu').toggleClass('on');
     });
 
     // 메인비주얼 슬라이드
@@ -69,14 +70,21 @@ $(function () {
         // autoplaySpeed: 3000,
     });
 
-    // 메인뉴스 좌측 탭
-    $('.news_wrap .left_tap .tab_tit li a').on('click', function (e) {
+    // 메인뉴스
+    $('.news_wrap .tab_box .tab_tit li button').on('click', function (e) {
         e.preventDefault();
         let idx = $(this).parent().index();
-        $('.news_wrap .left_tap .tab_con>li').removeClass('on');
-        $('.news_wrap .left_tap .tab_con>li').eq(idx).addClass('on');
-        $('.news_wrap .left_tap .tab_tit>li').removeClass('on')
-        $('.news_wrap .left_tap .tab_tit>li').eq(idx).addClass('on')
+        $('.news_wrap .tab_box .tab_con>li').removeClass('on');
+        $('.news_wrap .tab_box .tab_con>li').eq(idx).addClass('on');
+        $('.news_wrap .tab_box .tab_tit>li').removeClass('on');
+        $('.news_wrap .tab_box .tab_tit>li').eq(idx).addClass('on');
+    });
+    $('.news_popup_slide').slick({
+        arrows: true,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: false,
     });
 
     //투탑버튼 실행
@@ -92,7 +100,7 @@ $(function () {
         } else {
             $('.totop_btn').removeClass('on')
             $('.header').removeClass('on')
-        }
+        };
     });
 
 });
