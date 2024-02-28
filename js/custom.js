@@ -60,27 +60,13 @@ $(function () {
 
     // 메인히스토리 슬라이드
     $('.History_slide').slick({
-        arrows: true,
+        arrows: false,
         slidesToShow: 4,
-        dots: false,
+        slidesToScroll: 4,
+        dots: true,
         autoplay: false,
-    });
-
-    $('.History_wrap .History_slide').on('afterChange', function (e, s, c) {
-        console.log(e, s, c);
-
-        const current = $('.History_wrap .History_slide .slick-current')
-        current.addClass('on').siblings().removeClass('on')
-    });
-
-    $('.History_wrap .top_dots li').on('click', function (e) {
-        e.preventDefault();
-        let idx = $(this).index();
-        $('.History_wrap .History_slide').slick('slickGoTo', idx * 4)
-
-
-        $('.History_wrap .top_dots li').removeClass('on')
-        $('.History_wrap .top_dots li').eq(idx).addClass('on')
+        // autoplay: true,
+        // autoplaySpeed: 3000,
     });
 
     // 메인뉴스 좌측 탭
