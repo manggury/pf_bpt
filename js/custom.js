@@ -95,14 +95,22 @@ $(function () {
         autoplaySpeed: 3000,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 769,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                 },
+            }, {
+                breakpoint: 376,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    autoplay: false,
+                },
             },
 
         ],
+
     });
 
     // 메인뉴스
