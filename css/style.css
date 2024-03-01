@@ -1223,6 +1223,7 @@
 
 @media (max-width:768px) {
     .news_wrap {
+        gap: 50px;
         flex-wrap: wrap;
     }
 
@@ -1240,14 +1241,33 @@
         flex: 0 1 100%;
     }
 
+    .news_wrap .tab_box .tab_con>li>* {
+        flex: 300px 1 1;
+    }
+
     .brochure {
-        flex: 0 1 45%;
+        flex: 0 1 calc(50% - 25px);
+    }
+
+    .news_wrap .brochure a {
+        display: block;
+        text-align: center;
+        height: 300px;
+        line-height: 300px;
     }
 
     .news_popup {
-        flex: 0 1 45%;
+        flex: 0 1 calc(50% - 25px);
     }
 
+    .news_wrap .popup_wrap .news_popup_slide .itm {
+        height: 300px;
+        padding: 50px 0px;
+    }
+
+    .news_wrap .popup_wrap .news_popup_slide .slick-prev {
+        left: 200px;
+    }
 }
 
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡ푸터ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
